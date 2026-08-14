@@ -8,7 +8,7 @@ Power BI dashboard analyzing 5,000 call records from a call centre's Q1 2021 ope
 ---
 
 ## Overview
-<img width="673" height="381" alt="pwc 2" src="https://github.com/user-attachments/assets/a9930d44-0b0b-433d-aed2-480f36f46328" />
+<img width="1000" height="550" alt="pwc 2" src="https://github.com/user-attachments/assets/a9930d44-0b0b-433d-aed2-480f36f46328" />
 
 | Metric | Value |
 |---|---|
@@ -24,7 +24,7 @@ Power BI dashboard analyzing 5,000 call records from a call centre's Q1 2021 ope
 ## Key Findings
 
 ### 1. Call Outcomes
-<img width="673" height="380" alt="pwc 3" src="https://github.com/user-attachments/assets/4d793d51-4a90-40f9-9d79-8c6830557d4a" />
+<img width="1000" height="550" alt="pwc 3" src="https://github.com/user-attachments/assets/4d793d51-4a90-40f9-9d79-8c6830557d4a" />
 
 | Outcome | Calls |
 |---|---|
@@ -45,7 +45,7 @@ Of the 4,054 answered calls, 3,646 were marked resolved — a 89.94% true resolu
 "Not Served" (946) lines up exactly with the number of abandoned calls — every unanswered call is logged as a satisfaction gap.
 
 ### 2. Agent Performance
-<img width="672" height="380" alt="pwc 4" src="https://github.com/user-attachments/assets/90d3de71-9ba3-4ce4-b9a7-e51b973bff65" />
+<img width="1000" height="550" alt="pwc 4" src="https://github.com/user-attachments/assets/90d3de71-9ba3-4ce4-b9a7-e51b973bff65" />
 
 | Agent | Total Calls | Answer Rate | Avg. Speed (sec) | True Resolution Rate | CSAT |
 |---|---|---|---|---|---|
