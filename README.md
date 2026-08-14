@@ -1,5 +1,5 @@
 # Call Centre Data Analysis (PwC Style Dashboard)
-<img width="670" height="380" alt="pwc 1" src="https://github.com/user-attachments/assets/7e06fc2f-238d-4f73-b101-5ef56082c319" />
+<img width="1000" height="550" alt="pwc 1" src="https://github.com/user-attachments/assets/7e06fc2f-238d-4f73-b101-5ef56082c319" />
 
 Power BI dashboard analyzing 5,000 call records from a call centre's Q1 2021 operations (Jan–Mar 2021) — covering call volume, resolution, satisfaction, and agent performance.
 
