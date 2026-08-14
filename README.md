@@ -1,4 +1,4 @@
-# Call Centre Data Analysis (PwC Style Dashboard)
+# Call Centre Data Analysis (PwC Dashboard)
 <img width="900" height="450" alt="pwc 1" src="https://github.com/user-attachments/assets/65af69be-1244-4196-a36a-8e612e68c98e" />
 
 Power BI dashboard analyzing 5,000 call records from a call centre's Q1 2021 operations (Jan–Mar 2021) — covering call volume, resolution, satisfaction, and agent performance.
@@ -26,7 +26,6 @@ Power BI dashboard analyzing 5,000 call records from a call centre's Q1 2021 ope
 ### 1. Call Outcomes
 <img width="673" height="380" alt="pwc 3" src="https://github.com/user-attachments/assets/1d8cd915-7215-49ca-b9a4-0ccdac3ee9d2" />
 
-
 | Outcome | Calls |
 |---|---|
 | Answered | 4,054 |
@@ -47,7 +46,6 @@ Of the 4,054 answered calls, 3,646 were marked resolved — a 89.94% true resolu
 
 ### 2. Agent Performance
 <img width="672" height="380" alt="pwc 4" src="https://github.com/user-attachments/assets/40eac2ba-4b1a-430d-a412-fcb640b09685" />
-
 
 
 | Agent | Total Calls | Answer Rate | Avg. Speed (sec) | True Resolution Rate | CSAT |
