@@ -1,115 +1,116 @@
-# Insurance Portfolio Analytics
+# Call Centre Data Analysis (PwC Style Dashboard)
+<img width="670" height="380" alt="pwc 1" src="https://github.com/user-attachments/assets/7e06fc2f-238d-4f73-b101-5ef56082c319" />
 
-Power BI dashboard analyzing 1,338 policyholder records — connecting demographics (age, sex, BMI, children), smoking status, and region with insurance charges to identify the biggest drivers of cost.
+Power BI dashboard analyzing 5,000 call records from a call centre's Q1 2021 operations (Jan–Mar 2021) — covering call volume, resolution, satisfaction, and agent performance.
 
-**Dashboard includes:** KPI summary cards (policyholders, total charges, peak claim, average charge, smoker/non-smoker/high-risk counts), an average-charge-by-smoker-status chart, an average-charge-by-age-group chart, a policyholders-by-region donut chart, an average-charge-by-BMI-category chart, an average-charge-by-region-and-smoker-status chart, an average-charge-by-children line chart, and interactive filters for sex and region.
+**Dashboard includes 4 pages:** an intro page, a Main Overview dashboard (KPI cards, agent performance table, satisfaction levels, call volume by hour/day), an Operational Dashboard (monthly volume, answer rate by agent, topic distribution), and an Agent Dashboard (talk duration, CSAT, and resolution by topic per agent) — all with interactive filters for agent, topic, month, and weekday.
 
 ---
 
 ## Overview
+<img width="673" height="381" alt="pwc 2" src="https://github.com/user-attachments/assets/a9930d44-0b0b-433d-aed2-480f36f46328" />
 
 | Metric | Value |
 |---|---|
-| Total policyholders | 1,338 |
-| Total charges | $17,755,825 |
-| Peak claim | $63,770 |
-| Average charge | $13,270 |
-| Smoker count | 274 |
-| Non-smoker count | 1,064 |
-| High-risk count (smoker + obese) | ~144 |
+| Total call volume | 5,000 |
+| CSAT | 68.07% |
+| Calls answered | 81.08% |
+| Calls abandoned | 18.92% |
+| Avg. speed of call answer | 67.52 sec |
+| Avg. call handling time (talk duration) | 224.92 sec |
 
 ---
 
 ## Key Findings
 
-### 1. Policyholder Snapshot
+### 1. Call Outcomes
+<img width="673" height="380" alt="pwc 3" src="https://github.com/user-attachments/assets/4d793d51-4a90-40f9-9d79-8c6830557d4a" />
 
-| Sex | Policyholders |
+| Outcome | Calls |
 |---|---|
-| Male | 676 |
-| Female | 662 |
+| Answered | 4,054 |
+| Abandoned | 946 |
 
-| Region | Policyholders |
+Of the 4,054 answered calls, 3,646 were marked resolved — a 89.94% true resolution rate among calls that connected. That means roughly 1 in 10 answered calls still went unresolved.
+
+| Satisfaction Level | Calls |
 |---|---|
-| Southeast | 364 |
-| Southwest | 325 |
-| Northwest | 325 |
-| Northeast | 324 |
+| Normal | 1,218 |
+| Satisfied | 1,180 |
+| Not Served | 946 |
+| Very Satisfied | 843 |
+| Very Dissatisfied | 417 |
+| Dissatisfied | 396 |
 
-Policyholders are almost evenly split across sex and region.
+"Not Served" (946) lines up exactly with the number of abandoned calls — every unanswered call is logged as a satisfaction gap.
 
-### 2. Smoking Status Is the Biggest Cost Driver
+### 2. Agent Performance
+<img width="672" height="380" alt="pwc 4" src="https://github.com/user-attachments/assets/90d3de71-9ba3-4ce4-b9a7-e51b973bff65" />
 
-| Smoking Status | Policyholders | Avg. Charge |
-|---|---|---|
-| Non-smoker | 1,064 | $8,434 |
-| Smoker | 274 | $32,050 |
+| Agent | Total Calls | Answer Rate | Avg. Speed (sec) | True Resolution Rate | CSAT |
+|---|---|---|---|---|---|
+| Martha | 638 | 80.56% | 69 | 89.69% | 69.42% |
+| Dan | 633 | 82.62% | 67 | 90.06% | 68.95% |
+| Diane | 633 | 79.15% | 66 | 90.22% | 68.10% |
+| Greg | 624 | 80.45% | 68 | 90.64% | 68.09% |
+| Stewart | 582 | 81.96% | 66 | 88.89% | 68.01% |
+| Jim | 666 | 80.48% | 66 | 90.49% | 67.87% |
+| Becky | 631 | 81.93% | 65 | 89.36% | 67.43% |
+| Joe | 593 | 81.62% | 71 | 90.08% | 66.61% |
 
-**Smokers are charged nearly 4x more than non-smokers on average** — $32,050 vs. $8,434 — despite making up only 274 of 1,338 policyholders (about 1 in 5).
+Performance is tightly clustered — no single agent stands out as a major outlier, though Martha leads on CSAT (69.42%) while Greg leads on true resolution rate (90.64%).
 
-### 3. Charges by Region and Smoker Status
+### 3. Call Volume Patterns
 
-| Region | Non-smoker Avg. Charge | Smoker Avg. Charge |
-|---|---|---|
-| Southeast | $8,032 | $34,845 |
-| Southwest | $8,019 | $32,269 |
-| Northwest | $8,556 | $30,192 |
-| Northeast | $9,166 | $29,674 |
+| Day | Calls |
+|---|---|
+| Monday | 770 |
+| Saturday | 768 |
+| Sunday | 716 |
+| Thursday | 712 |
+| Friday | 680 |
+| Wednesday | 679 |
+| Tuesday | 675 |
 
-The smoker/non-smoker cost gap holds in every region, and Southeast has the highest average charge for smokers ($34,845).
+Monday and Saturday are the busiest days, roughly 90 calls higher than the quietest day (Tuesday).
 
-### 4. Charges by Age, BMI, and Children
+| Month | Calls |
+|---|---|
+| January 2021 | 1,772 |
+| February 2021 | 1,616 |
+| March 2021 | 1,612 |
+| **Total** | **5,000** |
 
-| Age Group | Policyholders | Avg. Charge |
-|---|---|---|
-| 18–25 | 306 | $9,087 |
-| 26–35 | 268 | $10,495 |
-| 36–45 | 264 | $13,493 |
-| 46–55 | 284 | $15,987 |
-| 56–64 | 216 | $18,796 |
+Call volume by hour peaks between 11:00–17:00, dropping off sharply after 17:00 as the centre's operating hours end.
 
-Average charge rises steadily with age — the 56–64 group pays roughly double the 18–25 group.
+### 4. Call Topics
 
-| BMI Category | Policyholders | Avg. Charge |
-|---|---|---|
-| Obese | 707 | $15,552 |
-| Overweight | 386 | $10,988 |
-| Normal | 225 | $10,409 |
-| Underweight | 20 | $8,852 |
+| Topic | Calls (answered) | Resolved | Unresolved |
+|---|---|---|---|
+| Streaming | 847 | 749 | 98 |
+| Technical Support | 805 | 736 | 69 |
+| Payment Related | 818 | 729 | 89 |
+| Contract Related | 789 | 709 | 80 |
+| Admin Support | 795 | 723 | 72 |
 
-707 of 1,338 policyholders (about 1 in 2) fall into the Obese category, and this group carries the highest average charge.
-
-| Children | Policyholders | Avg. Charge |
-|---|---|---|
-| 0 | 574 | $12,366 |
-| 1 | 324 | $12,731 |
-| 2 | 240 | $15,074 |
-| 3 | 157 | $15,355 |
-| 4 | 25 | $13,851 |
-| 5 | 18 | $8,786 |
-
-Average charge rises from 0 to 3 children, then drops off for policyholders with 4 or 5 children — though these are the smallest groups (25 and 18 people).
+Call volume is spread almost evenly across the five topics, and resolution rates stay close together (around 90–91% for each) — no single topic category is a clear resolution bottleneck.
 
 ---
 
 ## Key Insights
 
-- **Smoking status is the single strongest cost driver in the portfolio** — the ~4x charge gap between smokers and non-smokers holds consistently across every region.
-- **About 144 policyholders are both smokers and obese**, a compounding high-risk group that likely drives a disproportionate share of the $17.8M in total charges.
-- **Cost rises predictably with age**, making age-based premium tiers a reasonable and data-supported pricing lever.
-- **Obesity alone (independent of smoking) adds roughly $5,000–$7,000** to average charges compared to Normal or Overweight BMI categories.
-- **The children-vs-charge relationship is less clear-cut**, especially for 4–5 children — the smaller sample sizes there mean this pattern should be viewed with caution rather than treated as a firm trend.
+- **Nearly 1 in 5 calls are abandoned (946 of 5,000)**, and this exactly matches the "Not Served" satisfaction bucket — unanswered calls are the single biggest driver of dissatisfaction in the data.
+- **Even among answered calls, about 1 in 10 still go unresolved** (10.06%), meaning resolution — not just pickup — deserves its own tracking metric.
+- **Agent performance is consistent rather than polarized** — the spread between the best and weakest agent on CSAT is under 3 percentage points, suggesting training and process standards are working evenly across the team.
+- **Monday and Saturday carry the heaviest call load**, which is useful for staffing and shift planning.
+- **No single call topic is disproportionately harder to resolve** — the resolution rate stays in a tight 89–91% band across all five categories.
 
 ---
 
 ## Recommendations
 
-1. Use smoking status as the primary risk-adjustment factor in pricing — it's the clearest, most consistent driver of cost across every region.
-2. Target the ~144 smoker-and-obese policyholders for wellness or smoking-cessation program outreach, given their compounded risk profile.
-3. Apply age-based premium tiers, since average charges rise steadily and predictably from the 18–25 to 56–64 age groups.
-4. Incorporate BMI into risk scoring alongside smoking status, since Obese policyholders carry meaningfully higher charges even as non-smokers.
-5. Collect more data on higher-children-count policyholders (4–5 children) before drawing firm conclusions — current sample sizes there are too small to generalize confidently.
-
----
-
-*Source: Insurance Portfolio Analytics dashboard (Power BI), 1,338-record policyholder dataset.*
+1. Prioritize reducing the 18.92% abandonment rate first — it's the largest single driver of "Not Served" dissatisfaction and likely the highest-leverage fix available.
+2. Track true resolution rate (not just answer rate) as its own KPI, since roughly 1 in 10 answered calls still go unresolved.
+3. Align staffing levels with the Monday/Saturday call volume peaks to reduce wait times and abandonment on the busiest days.
+4. Since agent performance is already tightly clustered, focus coaching on process consistency (e.g., speed of answer) rather than singling out any one agent.
+5. Continue monitoring topic-level resolution rates for early warning if any single topic (e.g., Streaming, currently the largest unresolved count at 98) starts to drift from the ~90% band.
